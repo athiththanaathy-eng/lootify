@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lootify – Your Music, Your Vibe</title>
+    <meta name="description" content="Lootify is a premium music streaming experience. Listen to your favorite Tamil and Bollywood tracks." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-logo">
+            <svg class="logo-icon" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22" fill="url(#logoGrad)" />
+                <path d="M16 14c8-2 16 2 16 6s-8 4-16 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M16 20c6-1.5 12 1.5 12 4.5s-6 3-12 4.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M16 26c4-1 8 1 8 3s-4 2-8 3" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <defs>
+                    <linearGradient id="logoGrad" x1="0" y1="0" x2="48" y2="48">
+                        <stop offset="0%" stop-color="#1DB954"/>
+                        <stop offset="100%" stop-color="#1ed760"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="logo-text">Lootify</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" id="nav-home">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3l9-8z"/></svg>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item" id="nav-search">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <span>Search</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-library">
+            <div class="library-header">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                <span>Your Library</span>
+            </div>
+            <div class="library-card" id="playlist-card">
+                <img src="images/playlist_cover.png" alt="Playlist" class="library-card-img" />
+                <div class="library-card-info">
+                    <span class="library-card-title">My Playlist #1</span>
+                    <span class="library-card-sub">Playlist • 16 songs</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content" class="main-content">
+        <!-- Top bar -->
+        <header class="top-bar">
+            <div class="top-bar-nav">
+                <button class="top-btn" id="btn-back" aria-label="Go back">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </button>
+                <button class="top-btn" id="btn-forward" aria-label="Go forward">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Playlist Hero -->
+        <section class="playlist-hero" id="playlist-hero">
+            <img src="images/playlist_cover.png" alt="Playlist cover" class="hero-cover" id="hero-cover" />
+            <div class="hero-info">
+                <span class="hero-label">PLAYLIST</span>
+                <h1 class="hero-title" id="hero-title">My Playlist #1</h1>
+                <p class="hero-meta">Lootify • <span id="song-count">16</span> songs</p>
+            </div>
+        </section>
+
+        <!-- Action bar -->
+        <div class="action-bar">
+            <button class="play-all-btn" id="play-all-btn" aria-label="Play all">
+                <svg viewBox="0 0 24 24" fill="#000" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <button class="shuffle-btn" id="shuffle-btn" aria-label="Shuffle">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+            </button>
+        </div>
+
+        <!-- Track list header -->
+        <div class="tracklist-header">
+            <span class="th-num">#</span>
+            <span class="th-title">TITLE</span>
+            <span class="th-album">ALBUM</span>
+            <span class="th-duration">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </span>
+        </div>
+
+        <!-- Track list -->
+        <div class="tracklist" id="tracklist">
+            <!-- Songs are injected by JS -->
+        </div>
+    </main>
+
+    <!-- ========== NOW PLAYING BAR ========== -->
+    <footer class="now-playing-bar" id="now-playing-bar">
+        <div class="np-left">
+            <img id="np-cover" class="np-cover" src="images/playlist_cover.png" alt="Now playing" />
+            <div class="np-info">
+                <span class="np-title" id="np-title">Select a song</span>
+                <span class="np-artist" id="np-artist">—</span>
+            </div>
+            <button class="np-like" id="np-like" aria-label="Like">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+        </div>
+
+        <div class="np-center">
+            <div class="np-controls">
+                <button class="ctrl-btn" id="ctrl-shuffle" aria-label="Shuffle">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+                </button>
+                <button class="ctrl-btn" id="ctrl-prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z"/></svg>
+                </button>
+                <button class="ctrl-btn ctrl-play" id="ctrl-play" aria-label="Play">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" id="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button class="ctrl-btn" id="ctrl-next" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2V6z"/></svg>
+                </button>
+                <button class="ctrl-btn" id="ctrl-repeat" aria-label="Repeat">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+                </button>
+            </div>
+            <div class="np-progress-row">
+                <span class="np-time" id="np-current-time">0:00</span>
+                <div class="np-progress-bar" id="np-progress-bar">
+                    <div class="np-progress-fill" id="np-progress-fill"></div>
+                    <div class="np-progress-handle" id="np-progress-handle"></div>
+                </div>
+                <span class="np-time" id="np-duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="np-right">
+            <button class="ctrl-btn" id="ctrl-queue" aria-label="Queue">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+            </button>
+            <div class="volume-section">
+                <button class="ctrl-btn" id="ctrl-vol-icon" aria-label="Volume">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" id="vol-svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
+                <div class="volume-bar" id="volume-bar">
+                    <div class="volume-fill" id="volume-fill"></div>
+                    <div class="volume-handle" id="volume-handle"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="audio-player" crossorigin="anonymous"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
